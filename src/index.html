@@ -18,13 +18,8 @@
 	<!-- BUTTONS -->
 	<section id="buttons">
 		<!-- Twitter button -->
-		<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
-	    	<i class="fa fa-twitter fa-3x"></i>
-	    </a>
-	    <!-- Next Quote button -->
-	  	<a title="next quote" href="#" data-bind="click: nextQuote()">
-	    	<i class="fa fa-angle-right fa-3x"></i>
-	    </a>
+	
+	    
 	</section>
 	<!-- End of BUTTONS -->
 
@@ -32,15 +27,28 @@
 	<!-- Content acts as a button for next quote -->
 	<a title="next quote" href="#" data-bind="click: nextQuote">
 		<section id="content">
-			<!-- Quote Icon -->
-			<i class="fa fa-quote-right fa-3x"></i>
-			<!-- Data -->
+			<div>
+				<!-- Quote Icon -->
+				<i class="fa fa-quote-right fa-3x"></i>
+				<!-- Data -->
+			</div>
 		 	<div id='quotes' data-bind="with: currentQuote">
 		 		<!-- Quote -->
 		    	<div id="quote" data-bind="text: quote">:(</div>
+		    	<!-- Next Quote button -->
+		    	<div>
+				  	<a title="next quote" href="#" data-bind="click: nextQuote()">
+				    	<i class="fa fa-angle-right fa-3x"></i>
+				    </a>
+				</div>
 		    	<!-- Author -->
 		    	<div id="author" data-bind="text: author">Error loading data</div>
 			</div>
+			<div>
+				<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+	    			<i class="fa fa-twitter fa-3x"></i>
+	    		</a>
+	    	</div>
 		</section>
 	</a>
 	<!-- End of CONTENT -->
