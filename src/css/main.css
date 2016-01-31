@@ -1,22 +1,32 @@
 body {
 	font-family: 'Source Serif Pro', serif;
-	background-color: #EADEDF;
+	background-color: #9F6A71;
 }
 
 #container {
 	width: 600px;
 	margin: 0 auto;
 	margin-top: 5em;
-	color: #FFF;
-	background-color: #9F6A71;
+	color: #3C2E2E;
+	background-color: #EADEDF;
 	border-radius: 2em;
+}
+
+#quote {
+	margin: 1em;
+	font-size: 3em;
+}
+
+#author {
+	margin: 1em;
+	font-size: 2em;
 }
 
 .fa {
 	margin: 25px;
-	color: #3C2E2E;
+	color: #9F6A71
 }
 
 .fa:hover {
-	color: #EADEDF;
+	color: #3C2E2E;
 }
