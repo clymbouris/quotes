@@ -15,16 +15,22 @@ body {
 #quote {
 	margin: 1em;
 	font-size: 3em;
+	text-align: center;
 }
 
 #author {
 	margin: 1em;
 	font-size: 2em;
+	text-align: right;
+}
+
+#buttons {
+	text-align: right;
 }
 
 .fa {
 	margin: 25px;
-	color: #9F6A71
+	color: #9F6A71;
 }
 
 .fa:hover {

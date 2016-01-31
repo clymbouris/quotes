@@ -19,17 +19,19 @@
 	    	<span id="author" data-bind="text: author"></span>
 		</div>
 
-		<a title="Get Code" target="_blank">
-	      <i class="fa fa-github-alt fa-3x"></i>
-	    </a>
+		<section id="buttons">
+			<a title="Get Code" target="_blank" href="https://github.com/d3moid/quotes">
+		      <i class="fa fa-github-alt fa-3x"></i>
+		    </a>
 
-		<a id="tweet-quote" title="Tweet this quote!" target="_blank" data-bind="click: tweetQuote">
-	      <i class="fa fa-twitter fa-3x"></i>
-	    </a>
+			<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+		      <i class="fa fa-twitter fa-3x"></i>
+		    </a>
 
-	    <a title="next quote" target="_blank" data-bind="click: nextQuote()">
-	      <i class="fa fa-angle-right fa-3x"></i>
-	    </a>
+		    <a title="next quote" href="#" data-bind="click: nextQuote()">
+		      <i class="fa fa-angle-right fa-3x"></i>
+		    </a>
+		</section>
 	</div>
 
 <script src="components/jquery/dist/jquery.min.js"></script>
