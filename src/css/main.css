@@ -6,7 +6,7 @@ body {
 #container {
 	display: flex;
 	flex-direction: column;
-	width: 600px;
+	width: 450px;
 	margin: 0 auto;
 	margin-top: 5em;
 	color: #3C2E2E;
