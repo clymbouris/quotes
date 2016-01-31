@@ -16,6 +16,7 @@ body {
 #content {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 #quotes {
@@ -33,6 +34,10 @@ body {
 #author {
 	margin: 25px;
 	font-size: 1.5em;
+}
+
+#tweet-quote {
+
 }
 
 a {
