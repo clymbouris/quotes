@@ -21,18 +21,19 @@ body {
 #quotes {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 #quote {
+	width: 100%;
 	margin: 25px;
 	font-size: 2.5em;
-	align-self: flex-start;
 }
 
 #author {
+	text-align: right;
 	margin: 25px;
 	font-size: 1.5em;
-	align-self: flex-end;
 }
 
 a {
