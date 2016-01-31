@@ -31,7 +31,7 @@ function ViewModel() {
 	
 	self.nextQuote = function() {
 		
-		var author = getRandomAuthor();
+		var author = self.getRandomAuthor(); 
 		var quote = model.data.quotes.one.q1;
 
 		self.currentQuote({ "author": author, "quote": quote});
