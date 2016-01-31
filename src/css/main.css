@@ -19,6 +19,10 @@ body {
 	align-items: right;
 }
 
+#features {
+	text-align: right;
+}
+
 #quote {
 	margin: 25px;
 	font-size: 2.5em;
@@ -28,10 +32,6 @@ body {
 #author {
 	margin: 25px;
 	font-size: 1.5em;
-	text-align: right;
-}
-
-#tweet-quote {
 	text-align: right;
 }
 
