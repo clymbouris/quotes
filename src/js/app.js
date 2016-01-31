@@ -9,6 +9,8 @@ var model = {
 		$.getJSON('js/quotes.json')
 		.done(function( json ) {
 			model.data = json;
+			var vm = new ViewModel();
+			ko.applyBindings(vm);
 		})
 		.fail(function( jqxhr, textStatus, error ) {
 			var err = textStatus + ", " + error;
@@ -24,6 +26,7 @@ function ViewModel() {
 
 	var self = this;
 	
+	self.availableAuthors = model.data.authors.length - 1;
 	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
@@ -36,9 +39,9 @@ function ViewModel() {
 	self.nextQuote();
 	
 	self.getRandomAuthor = function() {
-		var max = model.data.authors.length - 1;
-		var random = Math.floor(Math.random() * max + 1);
-
+		 
+		var random = Math.floor(Math.random() * self.availableAuthors + 1);
+		console.log(random);
 	};
 
 	self.getRandomQuote = function(author) {
@@ -55,5 +58,3 @@ function ViewModel() {
 // -- Initialize Components -- //
 
 model.init();
-var vm = new ViewModel();
-ko.applyBindings(vm);
