@@ -26,13 +26,11 @@ body {
 
 #quote {
 	width: 100%;
-	margin: 25px;
 	font-size: 2.5em;
 }
 
 #author {
-	text-align: right;
-	margin: 25px;
+	margin-top: 25px;
 	font-size: 1.5em;
 }
 
