@@ -13,14 +13,18 @@ body {
 }
 
 #content {
-	margin: 50px;
-	text-align: left;
+	display: flex;
+	flex-direction: column;
 }
 
 #quote {
 	margin: 25px;
 	font-size: 2em;
-	text-align: justify;
+	text-align: left;
+}
+
+#quote-icon {
+	color: #3C2E2E;
 }
 
 #author {
@@ -31,13 +35,15 @@ body {
 
 #buttons {
 	text-align: right;
+	color: #EADEDF;
+	background-color: #9F6A71;
+}
+
+a:hover {
+	color: #3C2E2E;
 }
 
 .fa {
 	margin: 25px;
-	color: #9F6A71;
-}
-
-.fa:hover {
-	color: #3C2E2E;
+	color: #EADEDF;
 }

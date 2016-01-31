@@ -13,18 +13,9 @@
 </head>
 <body>
 	<div id="container">
-		<div id="content">
-		 	<div id='quotes' data-bind="with: currentQuote">
-		 		<i class="fa fa-quote-right fa-3x"></i>
-		 		<br>
-		    	<span id="quote" data-bind="text: quote">twetwe askhjkjasfhl askfjha slkfjhas lfkjhaFS LKJHaf lkjhSF</span>
-		    	<br><br>
-		    	<span id="author" data-bind="text: author">twetwe safsafas</span>
-		    	<br>
-			</div>
-
-			<section id="buttons">
-				<a title="Get Code" target="_blank" href="https://github.com/d3moid/quotes">
+	
+	<section id="buttons">
+				<a id="github" title="Get Code" target="_blank" href="https://github.com/d3moid/quotes">
 			      <i class="fa fa-github-alt fa-3x"></i>
 			    </a>
 
@@ -36,6 +27,17 @@
 			      <i class="fa fa-angle-right fa-3x"></i>
 			    </a>
 			</section>
+		<div id="content">
+			
+
+			<i id="quote-icon" class="fa fa-quote-right fa-3x"></i>
+
+		 	<div id='quotes' data-bind="with: currentQuote">
+		    	<div id="quote" data-bind="text: quote">twetwe askhjkjasfhl askfjha slkfjhas lfkjhaFS LKJHaf lkjhSF</div>
+		    	<div id="author" data-bind="text: author">twetwe safsafas</div>
+			</div>
+
+
 		</div>
 	</div>
 
