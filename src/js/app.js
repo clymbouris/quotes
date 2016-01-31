@@ -29,7 +29,7 @@ function ViewModel() {
 	self.nextQuote = function() {
 		
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
-		var aRandom = Math.floor(Math.random() * authorsMax);
+		var aRandom = Math.floor(Math.random() * self.authorsMax);
 		var author = model.data.authors[aRandom].name;
 
 		var quotesMax = Object.keys(model.data.quotes[aRandom]).length;
