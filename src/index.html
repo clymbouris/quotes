@@ -23,18 +23,17 @@
 				<i class="fa fa-quote-right fa-3x"></i>
 				<!-- Data -->
 			</div>
-		 	<div data-bind="with: currentQuote">
+		 	<div id="quotes" data-bind="with: currentQuote">
 		 		<!-- Quote -->
 		    	<div id="quote" data-bind="text: quote"></div>
+		    	<div id="author" data-bind="text: author"></div>
 		    	<div>
-		    		<!-- Author -->
-		    		<span id="author" data-bind="text: author"></span>	
-	   			</div>
-			</div>
-			<!-- Twitter -->
-			<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+		    	<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
 	   			<i class="fa fa-twitter fa-3x"></i>
 	   		</a>
+	   		</div>
+			</div>
+
 		</section>
 	</a>
 	<section id="features">

@@ -16,23 +16,23 @@ body {
 #content {
 	display: flex;
 	flex-direction: row;
-	align-items: right;
 }
 
-#features {
-	text-align: right;
+#quotes {
+	display: flex;
+	flex-direction: row;
 }
 
 #quote {
 	margin: 25px;
 	font-size: 2.5em;
-	text-align: left;
+	align-self: flex-start;
 }
 
 #author {
 	margin: 25px;
 	font-size: 1.5em;
-	text-align: right;
+	align-self: flex-end;
 }
 
 a {
