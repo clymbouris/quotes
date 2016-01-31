@@ -18,22 +18,25 @@ var model = {
 };
 
 
-
-// -- VIEW -- //
-
-var view = {
-
-};
-
-
-
 // -- VIEWMODEL -- //
 
 function ViewModel() {
 
 	var self = this;
 	
-	self.test = true;
+	self.currentQuote = { author: "name", quote: "quote" };
+	
+	self.getNextQuote = function() {
+
+	};
+	
+	self.getRandomNumber = function(max) {
+
+	};
+	
+	self.shareTwitter = function() {
+
+	}; 
 }
 
 
