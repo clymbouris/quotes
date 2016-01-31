@@ -13,14 +13,14 @@ body {
 }
 
 #quote {
-	margin: 1em;
-	font-size: 3em;
+	margin: 25px;
+	font-size: 2em;
 	text-align: center;
 }
 
 #author {
-	margin: 1em;
-	font-size: 2em;
+	margin: 25px;
+	font-size: 1em;
 	text-align: right;
 }
 
