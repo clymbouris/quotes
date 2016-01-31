@@ -1,17 +1,22 @@
 body {
-	background-color: #4B4E4E;
+	font-family: 'Source Serif Pro', serif;
+	background-color: #EADEDF;
 }
 
 #container {
 	width: 600px;
 	margin: 0 auto;
-	color: #F79D3D;
+	margin-top: 5em;
+	color: #FFF;
+	background-color: #9F6A71;
+	border-radius: 2em;
 }
 
 .fa {
 	margin: 25px;
+	color: #3C2E2E;
 }
 
 .fa:hover {
-	color: #42D823;
+	color: #EADEDF;
 }
