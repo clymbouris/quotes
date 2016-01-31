@@ -24,10 +24,12 @@ function ViewModel() {
 
 	var self = this;
 	
-	self.currentQuote = { author: "name", quote: "quote" };
+	self.currentQuote = ko.observable(self.nextQuote());
 	
-	self.getNextQuote = function() {
-
+	self.nextQuote = function() {
+		var author = model.data.authors.one.name;
+		var quote = model.data.quotes.one.q1;
+		self.currentQuote({ "author": author, "quote": quote});
 	};
 	
 	self.getRandomNumber = function(max) {
@@ -46,4 +48,3 @@ function ViewModel() {
 model.init();
 var vm = new ViewModel();
 ko.applyBindings(vm);
-console.log(vm.test);
