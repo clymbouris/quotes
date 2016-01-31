@@ -14,32 +14,31 @@
 <body>
 
 <div id="container">
+
 	<!-- CONTENT -->
-	<!-- Content acts as a button for next quote -->
-	<a title="next quote" href="#" data-bind="click: nextQuote()">
-		<section id="content">
-			<div>
-				<!-- Quote Icon -->
+	<section id="content">
+		<div>
+			<!-- Next Quote button -->
+			<a title="next quote" href="#" data-bind="click: nextQuote()">
 				<i class="fa fa-quote-right fa-3x"></i>
-				<!-- Data -->
-			</div>
-			<div>
-				<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
-		   			<i class="fa fa-twitter fa-3x"></i>
-		   		</a>
-	   		</div>
-		 	<div id="quotes" data-bind="with: currentQuote">
-		 		<!-- Quote -->
-		    	<div id="quote" data-bind="text: quote"></div>
-		    	<div id="author" data-bind="text: author"></div>
-		 
-			</div>
-
-
-		</section>
-	</a>
-
+			</a>
+		</div>
+		<div>
+			<!-- Tweet button -->
+			<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+	   			<i class="fa fa-twitter fa-3x"></i>
+	   		</a>
+   		</div>
+   		<!-- Quotes -->
+	 	<div id="quotes" data-bind="with: currentQuote">
+	 		<!-- Quote -->
+	    	<div id="quote" data-bind="text: quote"></div>
+	    	<!-- Author -->
+	    	<div id="author" data-bind="text: author"></div>
+		</div>
+	</section>
 	<!-- End of CONTENT -->
+
 </div>
 
 <script src="components/jquery/dist/jquery.min.js"></script>

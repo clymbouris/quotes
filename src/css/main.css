@@ -34,10 +34,7 @@ body {
 #author {
 	margin: 25px;
 	font-size: 1.5em;
-}
-
-#tweet-quote {
-
+	align-self: flex-end;
 }
 
 a {
