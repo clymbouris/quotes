@@ -1,6 +1,4 @@
 
-
-
 // -- MODEL -- //
 
 var model = {
@@ -30,7 +28,7 @@ function ViewModel() {
 	
 	self.nextQuote = function() {
 		
-		var authorsMax = Object.keys(model.data.authors).length;
+		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * authorsMax);
 		var author = model.data.authors[aRandom].name;
 
