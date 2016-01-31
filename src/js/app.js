@@ -6,11 +6,14 @@ var model = {
 	init: function() {
 		$.getJSON('js/quotes.json')
 		.done(function( json ) {
+
 			model.data = json;
+			
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
 		})
 		.fail(function( jqxhr, textStatus, error ) {
+
 			var err = textStatus + ", " + error;
 			console.log( "Request Failed: " + err );
 		});
@@ -40,8 +43,9 @@ function ViewModel() {
 	};
 
 	self.tweetQuote = function() {
-		$('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + self.currentQuote().quote + '" ' + self.currentQuote().author));
-	};
+		window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
+			encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+    };
 }
 
 
