@@ -1,5 +1,5 @@
 $(function(){
-	$.getJSON('quotes.json', function( data ) {
+	$.getJSON('js/quotes.json', function( data ) {
 	console.log(data);
 });
 }());
