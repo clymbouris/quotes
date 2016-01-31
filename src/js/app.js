@@ -30,10 +30,10 @@ function ViewModel() {
 	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
-		var author = model.data.authors.one.name;
-		console.log(author);
+		
+		var author = getRandomAuthor();
 		var quote = model.data.quotes.one.q1;
-		console.log(quote);
+
 		self.currentQuote({ "author": author, "quote": quote});
 	};
 	self.nextQuote();
@@ -42,6 +42,7 @@ function ViewModel() {
 		 
 		var random = Math.floor(Math.random() * self.availableAuthors + 1);
 		console.log(random);
+		return model.data.authors[random].name;
 	};
 
 	self.getRandomQuote = function(author) {
