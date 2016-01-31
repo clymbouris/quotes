@@ -13,14 +13,14 @@ body {
 }
 
 #content {
-	border-size: 25px;
-	border-color: #EADEDF;
+	margin: 50px;
+	text-align: left;
 }
 
 #quote {
 	margin: 25px;
 	font-size: 2em;
-	text-align: center;
+	text-align: justify;
 }
 
 #author {
