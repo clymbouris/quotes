@@ -24,15 +24,24 @@ function ViewModel() {
 
 	var self = this;
 	
-	self.currentQuote = ko.observable(self.nextQuote());
+	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
 		var author = model.data.authors.one.name;
+		console.log(author);
 		var quote = model.data.quotes.one.q1;
+		console.log(quote);
 		self.currentQuote({ "author": author, "quote": quote});
 	};
+	self.nextQuote();
 	
-	self.getRandomNumber = function(max) {
+	self.getRandomAuthor = function() {
+		var max = model.data.authors.length - 1;
+		var random = Math.floor(Math.random() * max + 1);
+
+	};
+
+	self.getRandomQuote = function(author) {
 
 	};
 	
