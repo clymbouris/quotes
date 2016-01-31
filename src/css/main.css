@@ -6,7 +6,7 @@ body {
 #container {
 	display: flex;
 	flex-direction: column;
-	width: 450px;
+	width: 500px;
 	margin: 0 auto;
 	margin-top: 5em;
 	color: #3C2E2E;
@@ -27,21 +27,20 @@ body {
 #quote {
 	width: 100%;
 	font-size: 2.5em;
+	margin-left: 25px;
 }
 
 #author {
-	margin-top: 25px;
+	margin: 25px;
 	font-size: 1.5em;
 }
 
 a {
 	text-decoration: none;
 	color: #3C2E2E;
-
 }
 
 .fa {
 	margin: 25px;
 	color: #3C2E2E;
-
 }
