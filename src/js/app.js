@@ -38,10 +38,10 @@ function ViewModel() {
 
 		self.currentQuote({ "author": author, "quote": quote });
 	};
-	
-	self.shareTwitter = function() {
 
-	}; 
+	self.tweetQuote = function() {
+		$('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + self.currentQuote().quote + '" ' + self.currentQuote().author));
+	};
 }
 
 
