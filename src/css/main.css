@@ -16,6 +16,7 @@ body {
 #content {
 	display: flex;
 	flex-direction: row;
+	align-items: right;
 }
 
 #quote {
@@ -30,10 +31,8 @@ body {
 	text-align: right;
 }
 
-#buttons {
+#tweet-quote {
 	text-align: right;
-	color: #3C2E2E;
-	background-color: #EADEDF;
 }
 
 a {
