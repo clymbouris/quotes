@@ -37,10 +37,12 @@ body {
 
 a {
 	text-decoration: none;
-	color: #3C2E2E ;
+	color: #3C2E2E;
+	display: inline-block;
 }
 
 .fa {
 	margin: 25px;
 	color: #3C2E2E;
+
 }

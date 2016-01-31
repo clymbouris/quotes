@@ -26,18 +26,21 @@
 		 	<div data-bind="with: currentQuote">
 		 		<!-- Quote -->
 		    	<div id="quote" data-bind="text: quote"></div>
-		    	<!-- Author -->
-		    	<div id="author" data-bind="text: author"></div>
-		    	
+		    	<div>
+		    		<!-- Author -->
+		    		<span id="author" data-bind="text: author"></span>
+		    		<!-- Twitter -->
+		    		<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+	   					<i class="fa fa-twitter fa-3x"></i>
+	   				</a>
+	   			</div>
 			</div>
 
 		</section>
 	</a>
 	<section id="features">
 		<div>
-		    <a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
-	   			<i class="fa fa-twitter fa-3x"></i>
-	   		</a>
+		    
 	 	</div>
  	</section>
 
