@@ -27,23 +27,19 @@ function ViewModel() {
 	var self = this;
 	
 	self.availableAuthors = 1;
-	self.currentQuote = ko.observable('');
-	self.currentAuthor = ko.observable('');
+	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
 		
 		var authorsMax = Object.keys(model.data.authors).length - 1;
-		console.log(authorsMax);
-
-		var aRandom = Math.floor(Math.random() * self.availableAuthors + 1);
+		var aRandom = Math.floor(Math.random() * authorMax);
 		var author = model.data.authors[aRandom].name;
 
 		var quotesMax = Object.keys(model.data.quotes[aRandom]).length - 1;
-		var qRandom = Math.floor(Math.random() * self.availableAuthors + 1);
+		var qRandom = Math.floor(Math.random() * quotesMax);
 		var quote = model.data.quotes[aRandom][qRandom];
 
-		self.currentQuote(quote);
-		self.currentAuthor(author);
+		self.currentQuote({ "author": author, "quote": quote });
 	};
 	self.nextQuote();
 	
