@@ -49,7 +49,6 @@ function ViewModel() {
 }
 
 
-
 // -- Initialize Components -- //
 
 model.init();
