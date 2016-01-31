@@ -1,0 +1,7 @@
+.fa {
+	margin: 25px;
+}
+
+.fa:hover {
+	color: blue;
+}
