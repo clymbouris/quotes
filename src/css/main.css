@@ -12,6 +12,11 @@ body {
 	border-radius: 2em;
 }
 
+#content {
+	border-size: 25px;
+	border-color: #EADEDF;
+}
+
 #quote {
 	margin: 25px;
 	font-size: 2em;
