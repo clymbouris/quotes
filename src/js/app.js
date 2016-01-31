@@ -44,7 +44,7 @@ function ViewModel() {
 
 	self.tweetQuote = function() {
 		window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
-			encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+			encodeURIComponent('"' + self.currentQuote().quote + '" ' + self.currentQuote().author));
     };
 }
 
