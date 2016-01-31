@@ -14,26 +14,36 @@
 <body>
 
 <div id="container">
+
 	<!-- BUTTONS -->
 	<section id="buttons">
+		<!-- Twitter button -->
 		<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
 	    	<i class="fa fa-twitter fa-3x"></i>
 	    </a>
-
+	    <!-- Next Quote button -->
 	  	<a title="next quote" href="#" data-bind="click: nextQuote()">
 	    	<i class="fa fa-angle-right fa-3x"></i>
 	    </a>
 	</section>
+	<!-- End of BUTTONS -->
+
 	<!-- CONTENT -->
-	<a title="next quote" data-bind="click: nextQuote">
-	<section id="content">
-		<i id="quote-icon" class="fa fa-quote-right fa-3x"></i>
-	 	<div id='quotes' data-bind="with: currentQuote">
-	    	<div id="quote" data-bind="text: quote">twetwe askhjkjasfhl askfjha slkfjhas lfkjhaFS LKJHaf lkjhSF</div>
-	    	<div id="author" data-bind="text: author"><em>twetwe safsafas</em></div>
-		</div>
-	</section>
+	<!-- Content acts as a button for next quote -->
+	<a title="next quote" href="#" data-bind="click: nextQuote">
+		<section id="content">
+			<!-- Quote Icon -->
+			<i class="fa fa-quote-right fa-3x"></i>
+			<!-- Data -->
+		 	<div id='quotes' data-bind="with: currentQuote">
+		 		<!-- Quote -->
+		    	<div id="quote" data-bind="text: quote">:(</div>
+		    	<!-- Author -->
+		    	<div id="author" data-bind="text: author">Error loading data</div>
+			</div>
+		</section>
 	</a>
+	<!-- End of CONTENT -->
 </div>
 
 <script src="components/jquery/dist/jquery.min.js"></script>
