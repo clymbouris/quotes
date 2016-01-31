@@ -1,0 +1,25 @@
+{
+      "authors": {
+        "one": {
+          "name": "Albert Einstein"
+		},
+		"two": {
+		  "name": "Neil DeGrasse Tyson"
+		}
+      },
+      "quotes": {
+        "one": {
+          "q1": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+          "q2": "Science without religion is lame, religion without science is blind.",
+          "q3": "Reality is merely an illusion, albeit a very persistent one.",
+          "q4": "Insanity: doing the same thing over and over again and expecting different results.",
+          "q5": "If you can't explain it simply, you don't understand it well enough."
+        },
+        "two": {
+          "q1": "Even with all our technology and the inventions that make modern life so much easier than it once was, it takes just one big natural disaster to wipe all that away and remind us that, here on Earth, we're still at the mercy of nature.",
+          "q2": "The Venus transit is not a spectacle the way a total solar eclipse is a spectacle.",
+          "q3": "We are part of this universe; we are in this universe, but perhaps more important than both of those facts, is that the universe is in us."
+        }
+    }
+
+}
