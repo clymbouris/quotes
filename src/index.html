@@ -30,14 +30,14 @@
 	   		</a>
    		</div>
    		<!-- Quotes -->
-   		<!-- ko with: currentQuote -->
-	 	<div id="quotes" data-bind="inOut: currentQuote">
+   		<div data-bind="inOut: currentQuote">
+	 	<div id="quotes" data-bind="with: currentQuote">
 	 		<!-- Quote -->
 	    	<span id="quote" data-bind="text: quote"></span>
 	    	<!-- Author -->
 	    	<span id="author" data-bind="text: author"></span>
 		</div>
-		<!-- /ko -->
+		</div>
 	</section>
 	<!-- End of CONTENT -->
 
