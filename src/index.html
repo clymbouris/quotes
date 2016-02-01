@@ -30,9 +30,10 @@
 	   		</a>
    		</div>
    		<!-- Quotes -->
-	 	<div id="quotes" data-bind="with: currentQuote">
+   		<!-- ko with: currentQuote -->
+	 	<div id="quotes" data-bind="inOut: currentQuote">
 	 		<!-- Quote -->
-	    	<span id="quote" data-bind="text: quote, inOut: $root.currentQuote"></span>
+	    	<span id="quote" data-bind="text: quote"></span>
 	    	<!-- Author -->
 	    	<span id="author" data-bind="text: author"></span>
 		</div>
