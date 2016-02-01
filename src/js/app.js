@@ -9,6 +9,23 @@ var model = {
 
 			model.data = json;
 			// Contruct ViewModel after model is loaded
+
+			// FADE Custom Binding
+			ko.bindingHandlers.fade = {
+			    init: function(element, valueAccessor) { 
+			        // initially don't show the element        
+			        $(element).hide();        
+			    },
+			    update: function(element, valueAccessor) {
+			        var value = ko.utils.unwrapObservable(valueAccessor());
+			        $(element).fadeOut(700, function() {
+			            // set the text of the element, value needs to defined outside the callback
+			            ko.utils.setTextContent(element, value);
+			            $(element).fadeIn(700);
+			        });
+			    }
+			};
+			
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
 		})
@@ -33,12 +50,7 @@ function ViewModel(err) {
 	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
-    	$(this).find("span")
-        .animate({opacity:0})
-        .queue(function(){
-             $(this).text("new text")
-                    .dequeue();
-        }); 
+
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
