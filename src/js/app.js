@@ -11,21 +11,17 @@ var model = {
 			// Contruct ViewModel after model is loaded
 
 			// FADE Custom Binding
-			ko.bindingHandlers.fade = {
-			    init: function(element, valueAccessor) { 
-			        // initially don't show the element        
-			        $(element).hide();        
+			ko.bindingHandlers.inOut = {
+			    init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+			        ko.bindingHandlers.html.init(element, valueAccessor, allBindings, viewModel, bindingContext);
+			        $(element).hide();
 			    },
-			    update: function(element, valueAccessor) {
-			        var value = ko.utils.unwrapObservable(valueAccessor());
-			        $(element).fadeOut(700, function() {
-			            // set the text of the element, value needs to defined outside the callback
-			            ko.utils.setTextContent(element, value);
-			            $(element).fadeIn(700);
-			        });
+			    update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+			        ko.bindingHandlers.html.update(element, valueAccessor, allBindings, viewModel, bindingContext);
+			        $(element).fadeIn(1500);
 			    }
 			};
-			
+
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
 		})
