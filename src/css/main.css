@@ -39,9 +39,14 @@ a {
 	color: #3C2E2E;
 }
 
+#next-quote:hover {
+	color: #9F6A71;
+}
 
+#tweet-quote:hover {
+	color: #00ADF1;
+}
 
 .button {
 	margin: 25px;
-	color: #3C2E2E;
 }
