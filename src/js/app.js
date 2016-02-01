@@ -33,7 +33,12 @@ function ViewModel(err) {
 	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
-		
+    	$(this).find("span")
+        .animate({opacity:0})
+        .queue(function(){
+             $(this).text("new text")
+                    .dequeue();
+        }); 
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
