@@ -19,7 +19,7 @@
 	<section id="content">
 		<div>
 			<!-- Next Quote button -->
-			<a title="next quote" href="#" data-bind="click: nextQuote(), value: currentQuote">
+			<a title="next quote" href="#" data-bind="click: nextQuote()">
 				<i class="fa fa-quote-right fa-3x"></i>
 			</a>
 		</div>
@@ -30,9 +30,9 @@
 	   		</a>
    		</div>
    		<!-- Quotes -->
-	 	<div id="quotes" data-bind="inOut: currentQuote, with: currentQuote">
+	 	<div id="quotes" data-bind="with: currentQuote">
 	 		<!-- Quote -->
-	    	<span id="quote" data-bind="text: quote"></span>
+	    	<span id="quote" data-bind="text: quote, inOut: $root.currentQuote"></span>
 	    	<!-- Author -->
 	    	<span id="author" data-bind="text: author"></span>
 		</div>
