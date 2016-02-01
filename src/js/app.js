@@ -9,19 +9,6 @@ var model = {
 
 			model.data = json;
 			// Contruct ViewModel after model is loaded
-
-			// FADE Custom Binding
-			ko.bindingHandlers.inOut = {
-			    init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-			        ko.bindingHandlers.html.init(element, valueAccessor, allBindings, viewModel, bindingContext);
-			        $(element).hide();
-			    },
-			    update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-			        ko.bindingHandlers.html.update(element, valueAccessor, allBindings, viewModel, bindingContext);
-			        $(element).fadeIn(1500);
-			    }
-			};
-
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
 		})

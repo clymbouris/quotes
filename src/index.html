@@ -13,32 +13,34 @@
 </head>
 <body>
 
-<div id="container">
-
-	<!-- CONTENT -->
-	<section id="content">
-		<div>
+	<!-- FlexBox Container -->
+	<div id="container">
+		
+		<!-- Buttons flex item -->
+		<div id="buttons">
+			
 			<!-- Next Quote button -->
-			<a title="next quote" href="#" data-bind="click: nextQuote()">
-				<i class="fa fa-quote-right fa-3x"></i>
-			</a>
-		</div>
-		<div>
+			<div class="button">
+				<a title="next quote" href="#" data-bind="click: nextQuote()">
+					<i class="fa fa-quote-right fa-3x"></i>
+				</a>
+			</div>
+			
 			<!-- Tweet button -->
-			<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
-	   			<i class="fa fa-twitter fa-3x"></i>
-	   		</a>
+			<div class="button">
+				<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+		   			<i class="fa fa-twitter fa-3x"></i>
+		   		</a>
+	   		</div>
+   		
    		</div>
-   		<!-- Quotes -->
-   		<div data-bind="inOut: currentQuote">
-	 	<div id="quotes" data-bind="with: currentQuote">
-	 		<!-- Quote -->
-	    	<span id="quote" data-bind="text: quote"></span>
-	    	<!-- Author -->
-	    	<span id="author" data-bind="text: author"></span>
-		</div>
-		</div>
-	</section>
+   		
+   		<!-- Quote flex item -->
+	 	<div id="quote" data-bind="text: currentQuote().quote"></div>
+	    
+	    <!-- Author -->
+	    <div id="author" data-bind="text: currentQuote().author"></div>
+	</div>
 	<!-- End of CONTENT -->
 
 </div>

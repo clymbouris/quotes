@@ -13,25 +13,22 @@ body {
 	background-color: #EADEDF;
 }
 
-#content {
+#buttons {
+	flex-grow: 2;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-#quotes {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	width: 100%;
 }
 
 #quote {
+	flex-grow: 7;
 	width: 100%;
 	font-size: 2.5em;
 	margin-left: 25px;
 }
 
 #author {
+	flex-grow: 1;
 	margin: 25px;
 	font-size: 1.5em;
 	align-self: flex-end;
@@ -42,7 +39,9 @@ a {
 	color: #3C2E2E;
 }
 
-.fa {
+
+
+.button {
 	margin: 25px;
 	color: #3C2E2E;
 }
