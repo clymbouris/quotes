@@ -21,14 +21,14 @@ body {
 }
 
 #quote {
-	flex-grow: 7;
+	flex-grow: 8;
 	width: 100%;
 	font-size: 2.5em;
 	margin-left: 25px;
 }
 
 #author {
-	flex-grow: 1;
+	flex-grow: 2;
 	margin: 25px;
 	font-size: 1.5em;
 	align-self: flex-end;
