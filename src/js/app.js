@@ -84,7 +84,7 @@ function ViewModel(err) {
 		}, 8000);
 
 	     $.ajax( {
-	        url: fqurl,
+	        url: wikiUrl,
 	        dataType: 'json',
 	        success: function(data) {
 
