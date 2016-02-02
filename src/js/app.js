@@ -46,7 +46,7 @@ function ViewModel(err) {
 	self.currentAuthor = ko.observable('');
 	
 	self.nextQuote = function() {
-		self.animate(false);
+
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
@@ -55,10 +55,9 @@ function ViewModel(err) {
 		var quotesMax = Object.keys(model.data.quotes[aRandom]).length;
 		var qRandom = Math.floor(Math.random() * quotesMax);
 		var quote = model.data.quotes[aRandom][qRandom];
-		// Update current quote
+		// Update current quote & author
 		self.currentQuote(quote);
 		self.currentAuthor(author);
-		self.animate(true);
 	};
 
 	self.tweetQuote = function() {
