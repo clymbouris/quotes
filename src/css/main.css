@@ -3,6 +3,11 @@ body {
 	background-color: #EADEDF;
 }
 
+textarea, button {
+	border: 0;
+	background-color: #EADEDF; 
+}
+
 #container {
 	display: flex;
 	flex-direction: column;
