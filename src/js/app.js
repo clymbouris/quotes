@@ -8,6 +8,19 @@ var model = {
 		.done(function( json ) {
 
 			model.data = json;
+			// Fade in/out custom binding
+			ko.bindingHandlers.fadeVisible = {
+			    init: function(element, valueAccessor) {
+			        // Initially set the element to be instantly visible/hidden depending on the value
+			        var value = valueAccessor();
+			        $('quote').fadeIn(); // Use "unwrapObservable" so we can handle values that may or may not be observable
+			    },
+			    update: function(element, valueAccessor) {
+			        // Whenever the value subsequently changes, slowly fade the element in or out
+			        var value = valueAccessor();
+			        $('quote').fadeOut().fadeIn();
+			    }
+			};
 			// Contruct ViewModel after model is loaded
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
@@ -29,7 +42,7 @@ var model = {
 function ViewModel(err) {
 
 	var self = this;
-
+	self.animations = true;
 	self.currentQuote = ko.observable();
 	
 	self.nextQuote = function() {
