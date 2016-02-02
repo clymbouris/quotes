@@ -13,11 +13,10 @@ var model = {
 			ko.bindingHandlers.fadeVisible = {
 			    init: function(element, valueAccessor) {
 			        // Initially set the element to be instantly visible/hidden depending on the value
-			        var value = valueAccessor();
+
 			    },
 			    update: function(element, valueAccessor) {
 			        // Whenever the value subsequently changes, slowly fade the element in or out
-			        var value = valueAccessor();
 			        $('#quote').fadeOut().fadeIn();
 			    }
 			};
@@ -43,7 +42,7 @@ var model = {
 function ViewModel(err) {
 
 	var self = this;
-
+	self.animate = ko.observable(false);
 	self.currentQuote = ko.observable('');
 	self.currentAuthor = ko.observable('');
 	
@@ -60,6 +59,7 @@ function ViewModel(err) {
 		// Update current quote
 		self.currentQuote(quote);
 		self.currentAuthor(author);
+		self.animate(true);
 	};
 
 	self.tweetQuote = function() {
