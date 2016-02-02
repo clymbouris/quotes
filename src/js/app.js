@@ -47,7 +47,7 @@ function ViewModel(err) {
 	self.currentAuthor = ko.observable('');
 	
 	self.nextQuote = function() {
-
+		self.animate(false);
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
