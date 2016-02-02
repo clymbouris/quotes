@@ -17,7 +17,7 @@ var model = {
 			    },
 			    update: function(element, valueAccessor) {
 			        // Whenever the value subsequently changes, slowly fade the element in or out
-			        $('#quote').fadeOut().fadeIn();
+			        $('#quote').fadeIn();
 			    }
 			};
 
@@ -42,7 +42,6 @@ var model = {
 function ViewModel(err) {
 
 	var self = this;
-	self.animate = ko.observable(false);
 	self.currentQuote = ko.observable('');
 	self.currentAuthor = ko.observable('');
 	
