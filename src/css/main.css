@@ -8,6 +8,11 @@ button {
 	background-color: #EADEDF; 
 }
 
+button:active,
+button:focus {
+	outline: none;
+}
+
 #container {
 	display: flex;
 	flex-direction: column;
@@ -45,7 +50,8 @@ a {
 	color: #3C2E2E;
 }
 
-#next-quote:hover {
+#next-quote:hover,
+#clipboard:hover {
 	color: #9F6A71;
 }
 
