@@ -28,11 +28,18 @@
 
 			<!-- Copy Clipboard button -->
 			<div>
-				<button id="clipboard" class="button" data-clipboard-target="#quote">
+				<button id="clipboard" class="button" title="Copy to clipboard!" data-clipboard-target="#quote">
 			   		<i class="fa fa-clipboard fa-3x"></i>
 		   		</button>
 	   		</div>
 			
+			<!-- Wikipedia button -->
+			<div class="button">
+				<a id="wiki-quote" title="Wiki on the author" href="#">
+		   			<i class="fa fa-wikipedia-w fa-3x"></i>
+		   		</a>
+	   		</div>
+
 			<!-- Tweet button -->
 			<div class="button">
 				<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">

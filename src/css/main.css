@@ -51,7 +51,8 @@ a {
 }
 
 #next-quote:hover,
-#clipboard:hover {
+#clipboard:hover,
+#wiki-quote:hover {
 	color: #9F6A71;
 }
 
