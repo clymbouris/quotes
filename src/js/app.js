@@ -21,6 +21,8 @@ var model = {
 			// Contruct ViewModel after model is loaded
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
+
+			var clipboard = new Clipboard('#clipboard');
 		})
 		.fail(function( jqxhr, textStatus, error ) {
 
