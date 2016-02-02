@@ -14,7 +14,7 @@ var model = {
 			    update: function(element, valueAccessor) {
 			        $(element).hide();
 			        ko.bindingHandlers.text.update(element, valueAccessor);
-			        $(element).fadeIn(1000);
+			        $(element).fadeIn(1500);
 			    }        
 			};
 
