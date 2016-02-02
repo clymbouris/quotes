@@ -1,4 +1,4 @@
-
+ 
 // -- MODEL -- //
 
 var model = {
@@ -10,15 +10,12 @@ var model = {
 			model.data = json;
 
 			// Fade in/out custom binding
-			ko.bindingHandlers.fadeVisible = {
-			    init: function(element, valueAccessor) {
-			        // Initially set the element to be instantly visible/hidden depending on the value
-
-			    },
+			ko.bindingHandlers.fadeText = {
 			    update: function(element, valueAccessor) {
-			        // Whenever the value subsequently changes, slowly fade the element in or out
-			        $('#quote').fadeIn();
-			    }
+			        $(element).hide();
+			        ko.bindingHandlers.text.update(element, valueAccessor);
+			        $(element).fadeIn(1000);
+			    }        
 			};
 
 			// Contruct ViewModel after model is loaded
