@@ -75,6 +75,26 @@ function ViewModel(err) {
 	    console.error('Action:', e.action);
 	    console.error('Trigger:', e.trigger);
 	});
+
+	self.wiki = function() {
+		var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=albert einstein&format=json';
+
+	    var requestTimeout = setTimeout( function() {
+	        $('#wikipedia-header').text("Could not load WikiPedia articles");
+		}, 8000);
+
+	     $.ajax( {
+	        url: fqurl,
+	        dataType: 'json',
+	        success: function(data) {
+
+	            console.log(data);
+
+	            clearTimeout(requestTimeout);
+	        }
+	    });
+	};
+	self.wiki();
 }
 
 
