@@ -21,20 +21,6 @@ var model = {
 			// Contruct ViewModel after model is loaded
 			var vm = new ViewModel();
 			ko.applyBindings(vm);
-
-			// Initialize Clipboard
-			var clipboard = new Clipboard('#clipboard');
-			clipboard.on('success', function(e) {
-		    	console.log('Action:', e.action);
-			    console.log('Text:', e.text);
-			    console.log('Trigger:', e.trigger);
-
-			    e.clearSelection();
-			});
-			clipboard.on('error', function(e) {
-			    console.error('Action:', e.action);
-			    console.error('Trigger:', e.trigger);
-			});
 		})
 		.fail(function( jqxhr, textStatus, error ) {
 
@@ -75,6 +61,20 @@ function ViewModel(err) {
 		window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
 			encodeURIComponent('"' + self.currentQuote() + '" ' + self.currentAuthor()));
     };
+
+    // Initialize Clipboard
+	self.clipboard = new Clipboard('#clipboard');
+	self.clipboard.on('success', function(e) {
+    	console.log('Action:', e.action);
+	    console.log('Text:', e.text);
+	    console.log('Trigger:', e.trigger);
+
+	    e.clearSelection();
+	});
+	self.clipboard.on('error', function(e) {
+	    console.error('Action:', e.action);
+	    console.error('Trigger:', e.trigger);
+	});
 }
 
 
