@@ -20,29 +20,36 @@
 		<div id="buttons">
 			
 			<!-- Next Quote button -->
-			<div class="button">
-				<a id="next-quote" title="Generate a random quote!" href="#" data-bind="click: nextQuote()">
+			<div>
+				<a id="next-quote" class="button" title="Generate a random quote!" href="#" data-bind="click: nextQuote()">
 					<i class="fa fa-quote-right fa-3x"></i>
 				</a>
 			</div>
 
+			<!-- Like button -->
+			<div>
+				<a class="button" id="like-quote" title="Like this quote!" href="#">
+		   			<i class="fa fa-heart-o fa-3x"></i>
+		   		</a>
+	   		</div>
+
 			<!-- Copy Clipboard button -->
 			<div>
-				<button id="clipboard" class="button" title="Copy to clipboard!" data-clipboard-target="#quote">
+				<a id="clipboard" class="button" title="Copy to clipboard!" href="#" data-clipboard-target="#quote">
 			   		<i class="fa fa-clipboard fa-3x"></i>
-		   		</button>
+		   		</a>
 	   		</div>
 			
 			<!-- Wikipedia button -->
-			<div class="button">
-				<a id="wiki-quote" title="Wiki on the author" href="#">
+			<div>
+				<a id="wiki-quote" class="button" title="Wiki on the author" href="#">
 		   			<i class="fa fa-wikipedia-w fa-3x"></i>
 		   		</a>
 	   		</div>
 
 			<!-- Tweet button -->
-			<div class="button">
-				<a id="tweet-quote" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
+			<div>
+				<a id="tweet-quote" class="button" title="Tweet this quote!" href="#" data-bind="click: tweetQuote">
 		   			<i class="fa fa-twitter fa-3x"></i>
 		   		</a>
 	   		</div>
