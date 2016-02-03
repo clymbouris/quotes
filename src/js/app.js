@@ -54,7 +54,8 @@ function ViewModel(err) {
 		var qRandom = Math.floor(Math.random() * quotesMax);
 		var quote = model.data.quotes[aRandom][qRandom];
 		// Update current quote & author
-		$('#quote').html('');
+		self.currentQuote('');
+		self.currentAuthor('');
 		$('#quote').css({ 'font-size': '2.4em' });
 		self.currentQuote(quote);
 		self.currentAuthor(author);
@@ -82,7 +83,8 @@ function ViewModel(err) {
 	        	var pagesNo = Object.keys(data.query.pages)[0];
 	        	var article = data.query.pages[pagesNo].extract;
 	        	// Clear quote and author
-				$('#quote').html('');
+				self.currentQuote('');
+				self.currentAuthor('');
 	        	$('#quote').css({ 'font-size': '1.2em' });
 	        	self.currentQuote(article);
 	        	self.currentAuthor('Wikipedia');
