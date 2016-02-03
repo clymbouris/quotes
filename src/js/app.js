@@ -82,16 +82,19 @@ function ViewModel(err) {
 		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor() + '&callback=wikiCallback';
 
 	    var requestTimeout = setTimeout( function() {
-	        $('#wikipedia-header').text("Could not load WikiPedia articles");
+	        $('#wikipedia-header').text("Could not load WikiPedia extract");
 		}, 8000);
 
 	     $.ajax( {
 	        url: wikiUrl,
 	        dataType: 'jsonp',
 	        success: function(data) {
+	        	var pagesNo = Object.keys(data.query.pages)[0];
+	        	var article = data.query.pages[pagesNo].extract;
+	        	$('#quote').text(article);
+	        	$('#author').text('Wikipedia');
+	            console.log(article);
 
-	            console.log(data);
-	            temp = data;
 	            clearTimeout(requestTimeout);
 	        }
 	    });
