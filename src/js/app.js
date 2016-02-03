@@ -55,7 +55,6 @@ function ViewModel(err) {
 		var quote = model.data.quotes[aRandom][qRandom];
 		// Update current quote & author
 		$('#quote').html('');
-		$('#author').html('');
 		$('#quote').css({ 'font-size': '2.4em' });
 		self.currentQuote(quote);
 		self.currentAuthor(author);
@@ -84,7 +83,6 @@ function ViewModel(err) {
 	        	var article = data.query.pages[pagesNo].extract;
 	        	// Clear quote and author
 				$('#quote').html('');
-				$('#author').html('');
 	        	$('#quote').css({ 'font-size': '1.2em' });
 	        	self.currentQuote(article);
 	        	self.currentAuthor('Wikipedia');
