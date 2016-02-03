@@ -77,7 +77,8 @@ function ViewModel(err) {
 	});
 
 	self.wiki = function() {
-		var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=albert einstein&format=json';
+
+		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor();
 
 	    var requestTimeout = setTimeout( function() {
 	        $('#wikipedia-header').text("Could not load WikiPedia articles");
@@ -85,7 +86,7 @@ function ViewModel(err) {
 
 	     $.ajax( {
 	        url: wikiUrl,
-	        dataType: 'json',
+	        dataType: 'jsonp',
 	        success: function(data) {
 
 	            console.log(data);
