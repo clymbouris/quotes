@@ -12,9 +12,9 @@ var model = {
 			// Fade in/out custom binding
 			ko.bindingHandlers.fadeText = {
 			    update: function(element, valueAccessor) {
-			        $(element).hide();
+			        $(element).fadeOut();
 			        ko.bindingHandlers.text.update(element, valueAccessor);
-			        $(element).fadeIn(1000);
+			        $(element).fadeIn();
 			    }        
 			};
 
