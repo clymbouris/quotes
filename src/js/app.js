@@ -44,6 +44,9 @@ function ViewModel(err) {
 	self.currentAuthor = ko.observable('');
 	
 	self.nextQuote = function() {
+		// Clear quote and author
+		$('#quote').html('');
+		$('#author').html('');
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
@@ -78,7 +81,10 @@ function ViewModel(err) {
 	});
 
 	self.wiki = function() {
-
+		// Clear quote and author
+		$('#quote').html('');
+		$('#author').html('');
+		// API Request URL
 		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor() + '&callback=wikiCallback';
 
 	    var requestTimeout = setTimeout( function() {
