@@ -47,6 +47,10 @@ function ViewModel(err) {
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
 		var author = model.data.authors[aRandom].name;
+		// Make sure author is different every time
+		while (author === currentAuthor()) {
+			author = model.data.authors[aRandom].name;
+		}
 		// Get random quote from author
 		var quotesMax = Object.keys(model.data.quotes[aRandom]).length;
 		var qRandom = Math.floor(Math.random() * quotesMax);
