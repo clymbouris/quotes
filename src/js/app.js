@@ -66,21 +66,7 @@ function ViewModel(err) {
 			encodeURIComponent('"' + self.currentQuote() + '" ' + self.currentAuthor()));
     };
 
-    // Initialize Clipboard
-	self.clipboard = new Clipboard('#clipboard');
-	self.clipboard.on('success', function(e) {
-    	console.log('Action:', e.action);
-	    console.log('Text:', e.text);
-	    console.log('Trigger:', e.trigger);
-
-	    e.clearSelection();
-	});
-	self.clipboard.on('error', function(e) {
-	    console.error('Action:', e.action);
-	    console.error('Trigger:', e.trigger);
-	});
-
-	self.wiki = function() {
+	self.wikiAuthor = function() {
 		// Clear quote and author
 		$('#quote').html('');
 		$('#author').html('');
@@ -106,6 +92,13 @@ function ViewModel(err) {
 	        }
 	    });
 	};
+
+	self.copyConfirm = function() {
+		$('#quote').fadeOut(500).fadeIn(500);
+	};
+
+    // Initialize Clipboard
+	self.clipboard = new Clipboard('#clipboard');
 }
 
 
