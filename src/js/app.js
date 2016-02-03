@@ -33,6 +33,7 @@ var model = {
 	}
 };
 
+var temp;
 
 // -- VIEWMODEL -- //
 
@@ -90,7 +91,7 @@ function ViewModel(err) {
 	        success: function(data) {
 
 	            console.log(data);
-
+	            temp = data;
 	            clearTimeout(requestTimeout);
 	        }
 	    });
