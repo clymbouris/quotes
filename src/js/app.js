@@ -12,7 +12,7 @@ var model = {
 			// Fade in/out custom binding
 			ko.bindingHandlers.fadeText = {
 			    update: function(element, valueAccessor) {
-			        $(element).fadeOut();
+			    	$(element).hide();
 			        ko.bindingHandlers.text.update(element, valueAccessor);
 			        $(element).fadeIn();
 			    }        
@@ -32,8 +32,6 @@ var model = {
 		});
 	}
 };
-
-var temp;
 
 // -- VIEWMODEL -- //
 
