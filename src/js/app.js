@@ -94,7 +94,7 @@ function ViewModel(err) {
 	};
 
 	self.copyConfirm = function() {
-		$('#quote').fadeOut(500).fadeIn(500);
+		$('#quote').fadeOut(250).fadeIn(250);
 	};
 
     // Initialize Clipboard
