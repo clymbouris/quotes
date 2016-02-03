@@ -44,7 +44,7 @@ function ViewModel(err) {
 	self.currentAuthor = ko.observable('');
 	
 	self.nextQuote = function() {
-
+		$('#quote').css({ 'font-size': '2.4em' });
 		// Get random author
 		if (!self.authorsMax) self.authorsMax = Object.keys(model.data.authors).length;
 		var aRandom = Math.floor(Math.random() * self.authorsMax);
@@ -78,7 +78,7 @@ function ViewModel(err) {
 	});
 
 	self.wiki = function() {
-
+		$('#quote').css({ 'font-size': '1.2em' });
 		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor() + '&callback=wikiCallback';
 
 	    var requestTimeout = setTimeout( function() {
