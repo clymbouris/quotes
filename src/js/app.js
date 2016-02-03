@@ -94,7 +94,7 @@ function ViewModel(err) {
 	};
 
 	self.copyConfirm = function() {
-		$('#quote').hide().show();
+		console.log('Copied to clipboard!');
 	};
 
     // Initialize Clipboard
