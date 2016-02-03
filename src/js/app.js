@@ -82,8 +82,9 @@ function ViewModel(err) {
 		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor() + '&callback=wikiCallback';
 
 	    var requestTimeout = setTimeout( function() {
-	        $('#wikipedia-header').text("Could not load WikiPedia extract");
-		}, 8000);
+	        self.currentQuote('Could not load Wikipedia article');
+	        self.currentAuthor('error');
+		}, 3000);
 
 	     $.ajax( {
 	        url: wikiUrl,
@@ -91,9 +92,8 @@ function ViewModel(err) {
 	        success: function(data) {
 	        	var pagesNo = Object.keys(data.query.pages)[0];
 	        	var article = data.query.pages[pagesNo].extract;
-	        	$('#quote').text(article);
-	        	$('#author').text('Wikipedia');
-	            console.log(article);
+	        	self.currentQuote(article);
+	        	self.currentAuthor('Wikipedia');
 
 	            clearTimeout(requestTimeout);
 	        }
