@@ -78,7 +78,7 @@ function ViewModel(err) {
 
 	self.wiki = function() {
 
-		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor();
+		var wikiUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=' + self.currentAuthor() + '&callback=wikiCallback';
 
 	    var requestTimeout = setTimeout( function() {
 	        $('#wikipedia-header').text("Could not load WikiPedia articles");
@@ -95,7 +95,6 @@ function ViewModel(err) {
 	        }
 	    });
 	};
-	self.wiki();
 }
 
 
