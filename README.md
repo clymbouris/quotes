@@ -1,5 +1,5 @@
-#What is it?
-A [gulp](https://github.com/gulpjs/gulp) workflow template for creating optimized front-end projects based on [knockout](https://github.com/knockout/knockout) and [jQuery](https://github.com/jquery/jquery). 
+#Quotes
+A random quote generator. Made as part of Front-End Development Certification offered by freeCodeCamp.
 
 ##Usage
 Click [here](http://d3moid.github.io/quotes/) for demo.
