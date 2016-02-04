@@ -9,7 +9,7 @@ Click [here](http://d3moid.github.io/quotes/) for demo.
 - I can click a button to tweet a quote
 - I can copy a quote
 - I can get more info about the quote author (Wikipedia API)
-- 
+
 ##Preview
 ![Quote Generator](http://i.snag.gy/2ISBZ.jpg)
 
